@@ -1,6 +1,7 @@
 import { ALL_PROGRAM_SLUGS, PROGRAMS, ProgramSlug } from './programs';
 import { APP_CONFIG } from './config';
 import { TransactionRecord, PaymentStatus, RegistrationStatus } from '@/types/registration';
+import { generateDynamicQrisPayload, generateQrisDataUrl } from './qris';
 
 // In-memory store on globalThis for development persistence
 declare global {
@@ -64,12 +65,12 @@ export function validateParticipantName(name: unknown): { isValid: boolean; erro
 
 /**
  * Server-side creation of a transaction
- * Enforces price from the server config — never client request
+ * Generates official dynamic QRIS payload from public/qris.jpeg with exact amount embedded
  */
-export function createTransactionRecord(params: {
+export async function createTransactionRecord(params: {
   participantName: string;
   programSlug: string;
-}): { success: true; transaction: TransactionRecord } | { success: false; error: string } {
+}): Promise<{ success: true; transaction: TransactionRecord } | { success: false; error: string }> {
   const nameValidation = validateParticipantName(params.participantName);
   if (!nameValidation.isValid) {
     return { success: false, error: nameValidation.error || 'Nama peserta tidak valid.' };
@@ -87,6 +88,10 @@ export function createTransactionRecord(params: {
   const reference = generateReference();
   const id = `tx_${Date.now()}_${Math.random().toString(36).substring(2, 8)}`;
 
+  // Generate dynamic QRIS payload and QR code image with exact nominal
+  const dynamicPayload = generateDynamicQrisPayload(program.price);
+  const dynamicDataUrl = await generateQrisDataUrl(dynamicPayload);
+
   const transaction: TransactionRecord = {
     id,
     reference,
@@ -97,9 +102,12 @@ export function createTransactionRecord(params: {
     paymentStatus: 'pending',
     registrationStatus: 'pending_confirmation',
     qrisUrl: APP_CONFIG.qris.staticImageUrl,
+    qrisPayload: dynamicPayload,
+    qrisDataUrl: dynamicDataUrl,
+    qrisType: 'dynamic',
     createdAt: now.toISOString(),
     expiresAt: expiresAt.toISOString(),
-    notes: 'Tagihan resmi Private Coding Class. Pembayaran melalui QRIS dan konfirmasi via WhatsApp.'
+    notes: 'Tagihan resmi Private Coding Class. QRIS dinamis dengan nominal otomatis terkunci.'
   };
 
   store.set(reference, transaction);

@@ -25,6 +25,9 @@ export interface TransactionRecord {
   paymentStatus: PaymentStatus;
   registrationStatus: RegistrationStatus;
   qrisUrl: string;
+  qrisPayload: string;
+  qrisDataUrl: string;
+  qrisType: 'static' | 'dynamic';
   createdAt: string;
   expiresAt: string;
   notes?: string;

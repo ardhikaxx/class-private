@@ -16,17 +16,17 @@ export interface PaymentService {
 }
 
 /**
- * Static QRIS Payment Service using local public/qris.jpeg
- * Hardcoded directly in code as requested
+ * Dynamic QRIS Payment Service
+ * Transforms base QRIS from public/qris.jpeg into dynamic QRIS with exact amount embedded
  */
-export class StaticQrisPaymentService implements PaymentService {
-  public providerName = 'Static QRIS (User Provided Image)';
+export class DynamicQrisPaymentService implements PaymentService {
+  public providerName = 'Dynamic QRIS (Auto Amount Locked)';
 
   async createInvoice(params: {
     participantName: string;
     programSlug: ProgramSlug;
   }): Promise<{ success: boolean; transaction?: TransactionRecord; error?: string }> {
-    const result = createTransactionRecord({
+    const result = await createTransactionRecord({
       participantName: params.participantName,
       programSlug: params.programSlug
     });
@@ -60,5 +60,5 @@ export class StaticQrisPaymentService implements PaymentService {
  * Returns the active payment service directly
  */
 export function getPaymentService(): PaymentService {
-  return new StaticQrisPaymentService();
+  return new DynamicQrisPaymentService();
 }
