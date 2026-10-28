@@ -19,11 +19,11 @@ export function RegistrationProgress({ currentStep }: RegistrationProgressProps)
       {/* Visual Steps Track */}
       <div className="relative flex items-center justify-between">
         {/* Horizontal line background */}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-slate-200 -z-0" />
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-0.5 bg-white/15 -z-0" />
         
         {/* Active progress bar */}
         <div
-          className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-indigo-600 transition-all duration-300 -z-0"
+          className="absolute left-0 top-1/2 -translate-y-1/2 h-0.5 bg-white transition-all duration-300 -z-0 shadow-sm shadow-white"
           style={{ width: `${((currentStep - 1) / (steps.length - 1)) * 100}%` }}
         />
 
@@ -34,20 +34,20 @@ export function RegistrationProgress({ currentStep }: RegistrationProgressProps)
           return (
             <div key={step.number} className="relative z-10 flex flex-col items-center">
               <div
-                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm transition-all duration-200 border-2 ${
+                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-mono font-bold text-xs sm:text-sm transition-all duration-200 border ${
                   isCompleted
-                    ? 'bg-indigo-600 border-indigo-600 text-white shadow-sm'
+                    ? 'bg-white border-white text-black shadow-md shadow-white/20'
                     : isCurrent
-                    ? 'bg-white border-indigo-600 text-indigo-700 shadow-md ring-4 ring-indigo-500/15'
-                    : 'bg-white border-slate-300 text-slate-400'
+                    ? 'bg-zinc-950 border-white text-white shadow-lg shadow-white/10 ring-4 ring-white/20'
+                    : 'bg-zinc-900 border-white/20 text-zinc-500'
                 }`}
               >
-                {isCompleted ? <CheckIcon className="w-4 h-4 text-white" /> : step.number}
+                {isCompleted ? <CheckIcon className="w-4 h-4 text-black" /> : step.number}
               </div>
 
               <span
-                className={`mt-2 text-[11px] sm:text-xs font-semibold whitespace-nowrap hidden sm:block ${
-                  isCurrent ? 'text-indigo-700 font-bold' : isCompleted ? 'text-slate-800' : 'text-slate-400'
+                className={`mt-2 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider whitespace-nowrap hidden sm:block ${
+                  isCurrent ? 'text-white' : isCompleted ? 'text-zinc-300' : 'text-zinc-600'
                 }`}
               >
                 {step.label}
@@ -58,8 +58,8 @@ export function RegistrationProgress({ currentStep }: RegistrationProgressProps)
       </div>
 
       {/* Mobile step label below track */}
-      <div className="sm:hidden text-center mt-3 text-xs font-bold text-indigo-700">
-        Langkah {currentStep} dari 4: {steps[currentStep - 1].label}
+      <div className="sm:hidden text-center mt-3 text-xs font-mono font-bold text-white uppercase tracking-wider">
+        LANGKAH {currentStep}/4: {steps[currentStep - 1].label}
       </div>
     </div>
   );

@@ -31,7 +31,7 @@ export function FAQSection() {
     {
       question: 'Bagaimana cara melakukan pembayaran dan konfirmasi?',
       answer:
-        'Pindai QRIS resmi di halaman pendaftaran dengan nominal yang sesuai, simpan screenshot bukti transaksi, lalu kirimkan ke WhatsApp pengajar melalui tombol yang tersedia.'
+        'Pindai QRIS dinamis di halaman pendaftaran (nominal otomatis terisi dan terkunci), simpan screenshot bukti transaksi, lalu kirimkan ke WhatsApp pengajar.'
     },
     {
       question: 'Kapan dan bagaimana akses Gemini Pro 3 bulan diberikan?',
@@ -50,16 +50,16 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-12 lg:py-16 bg-white border-b border-slate-200">
+    <section id="faq" className="py-14 lg:py-20 bg-zinc-950 text-white border-b border-white/10 relative overflow-hidden">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-2 mb-8">
-          <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200">
+          <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-300 bg-white/10 px-3 py-1 rounded-full border border-white/15 backdrop-blur-md">
             FAQ
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
             Pertanyaan Umum
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600">
+          <p className="text-xs sm:text-sm text-zinc-400">
             Jawaban ringkas seputar pelaksanaan bimbingan Private Coding Class.
           </p>
         </div>
@@ -70,7 +70,7 @@ export function FAQSection() {
             return (
               <div
                 key={idx}
-                className="border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50 hover:border-indigo-200"
+                className="border border-white/10 rounded-2xl overflow-hidden transition-all bg-zinc-900/40 backdrop-blur-xl hover:border-white/20"
               >
                 <button
                   type="button"
@@ -78,19 +78,19 @@ export function FAQSection() {
                   className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-sm sm:text-base font-bold text-slate-900">
+                  <span className="text-sm sm:text-base font-bold text-white">
                     {faq.question}
                   </span>
                   <ChevronDownIcon
-                    className={`w-4 h-4 text-slate-500 flex-shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 text-indigo-600' : ''
+                    className={`w-4 h-4 text-zinc-400 flex-shrink-0 transition-transform duration-200 ${
+                      isOpen ? 'rotate-180 text-white' : ''
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 sm:px-5 pb-4 pt-1 border-t border-slate-200/60 bg-white">
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <div className="px-4 sm:px-5 pb-4 pt-1 border-t border-white/10 bg-white/[0.02]">
+                    <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>

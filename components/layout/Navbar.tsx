@@ -11,39 +11,39 @@ export function Navbar() {
   const waConsultUrl = buildWhatsAppConsultationUrl();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-all">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-zinc-950/70 backdrop-blur-2xl transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg p-1">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
-              <LaptopIcon className="w-5 h-5 text-white" />
+          <Link href="/" className="flex items-center gap-3 group focus:outline-none rounded-lg p-1">
+            <div className="w-10 h-10 rounded-xl bg-white text-black flex items-center justify-center font-black shadow-md shadow-white/10 group-hover:scale-105 transition-transform">
+              <LaptopIcon className="w-5 h-5 text-black" />
             </div>
             <div>
-              <span className="font-bold text-lg sm:text-xl text-slate-900 tracking-tight block leading-tight">
+              <span className="font-extrabold text-lg sm:text-xl text-white tracking-tight block leading-tight">
                 {APP_CONFIG.name}
               </span>
-              <span className="text-xs text-slate-500 font-medium block">
-                Mentoring 1-on-1 Praktik Nyata
+              <span className="text-xs text-zinc-400 font-mono block">
+                Mentoring 1-on-1 Praktik
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
-            <Link href="/#solusi" className="hover:text-indigo-600 transition-colors">
+          <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-zinc-300">
+            <Link href="/#solusi" className="hover:text-white transition-colors">
               Kenapa Privat?
             </Link>
-            <Link href="/#program" className="hover:text-indigo-600 transition-colors">
+            <Link href="/#program" className="hover:text-white transition-colors">
               Pilihan Kelas
             </Link>
-            <Link href="/#fasilitas" className="hover:text-indigo-600 transition-colors">
+            <Link href="/#fasilitas" className="hover:text-white transition-colors">
               Fasilitas & Gemini Pro
             </Link>
-            <Link href="/#alur" className="hover:text-indigo-600 transition-colors">
+            <Link href="/#alur" className="hover:text-white transition-colors">
               Alur Pendaftaran
             </Link>
-            <Link href="/#faq" className="hover:text-indigo-600 transition-colors">
+            <Link href="/#faq" className="hover:text-white transition-colors">
               FAQ
             </Link>
           </nav>
@@ -54,16 +54,16 @@ export function Navbar() {
               href={waConsultUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold text-zinc-200 bg-white/5 hover:bg-white/10 border border-white/15 backdrop-blur-md transition-all"
               aria-label="Konsultasi via WhatsApp"
             >
-              <WhatsAppIcon className="w-4 h-4 text-emerald-600" />
+              <WhatsAppIcon className="w-4 h-4 text-zinc-200" />
               <span>Tanya Pengajar</span>
             </a>
 
             <Link
               href="/daftar"
-              className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm shadow-indigo-500/25 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="inline-flex items-center justify-center px-4 py-2 rounded-xl text-xs font-bold text-black bg-white hover:bg-zinc-200 shadow-sm shadow-white/20 transition-all"
             >
               Daftar Sekarang
             </Link>
@@ -73,14 +73,14 @@ export function Navbar() {
           <div className="flex md:hidden items-center gap-2">
             <Link
               href="/daftar"
-              className="inline-flex sm:hidden items-center justify-center px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 transition-all"
+              className="inline-flex sm:hidden items-center justify-center px-3 py-1.5 rounded-lg text-xs font-bold text-black bg-white hover:bg-zinc-200 transition-all"
             >
               Daftar
             </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="p-2 rounded-lg text-zinc-300 hover:text-white hover:bg-white/10 transition-colors"
               aria-expanded={mobileMenuOpen}
               aria-label="Buka menu navigasi"
             >
@@ -92,59 +92,59 @@ export function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-200 bg-white px-4 pt-4 pb-6 space-y-3 animate-in fade-in slide-in-from-top-2 duration-150">
-          <nav className="flex flex-col space-y-3 text-base font-medium text-slate-700">
+        <div className="md:hidden border-t border-white/10 bg-zinc-950/95 backdrop-blur-2xl px-4 pt-4 pb-6 space-y-3">
+          <nav className="flex flex-col space-y-3 text-sm font-medium text-zinc-200">
             <Link
               href="/#solusi"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-2 py-1.5 rounded-md hover:bg-slate-50 hover:text-indigo-600 transition-colors"
+              className="px-2 py-1.5 rounded-md hover:bg-white/5 hover:text-white transition-colors"
             >
               Kenapa Privat?
             </Link>
             <Link
               href="/#program"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-2 py-1.5 rounded-md hover:bg-slate-50 hover:text-indigo-600 transition-colors"
+              className="px-2 py-1.5 rounded-md hover:bg-white/5 hover:text-white transition-colors"
             >
               Pilihan Kelas
             </Link>
             <Link
               href="/#fasilitas"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-2 py-1.5 rounded-md hover:bg-slate-50 hover:text-indigo-600 transition-colors"
+              className="px-2 py-1.5 rounded-md hover:bg-white/5 hover:text-white transition-colors"
             >
               Fasilitas & Gemini Pro
             </Link>
             <Link
               href="/#alur"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-2 py-1.5 rounded-md hover:bg-slate-50 hover:text-indigo-600 transition-colors"
+              className="px-2 py-1.5 rounded-md hover:bg-white/5 hover:text-white transition-colors"
             >
               Alur Pendaftaran
             </Link>
             <Link
               href="/#faq"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-2 py-1.5 rounded-md hover:bg-slate-50 hover:text-indigo-600 transition-colors"
+              className="px-2 py-1.5 rounded-md hover:bg-white/5 hover:text-white transition-colors"
             >
               FAQ
             </Link>
           </nav>
 
-          <div className="pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+          <div className="pt-3 border-t border-white/10 flex flex-col gap-2.5">
             <a
               href={waConsultUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200"
+              className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-white bg-white/10 border border-white/20"
             >
-              <WhatsAppIcon className="w-4 h-4 text-emerald-600" />
+              <WhatsAppIcon className="w-4 h-4 text-white" />
               <span>Konsultasi via WhatsApp</span>
             </a>
             <Link
               href="/daftar"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm"
+              className="w-full flex items-center justify-center px-4 py-2.5 rounded-xl text-xs font-bold text-black bg-white hover:bg-zinc-200 shadow-sm"
             >
               Daftar Kelas Sekarang
             </Link>

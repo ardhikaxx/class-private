@@ -38,33 +38,33 @@ export function ProgramSelectionStep({
   };
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      {/* Participant Header Pill */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-4 bg-white border border-slate-200/90 rounded-2xl shadow-xs">
+    <div className="max-w-4xl mx-auto space-y-8 text-white">
+      {/* Participant Header Pill in Glass */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-4 bg-zinc-900/60 border border-white/15 rounded-2xl backdrop-blur-xl shadow-lg">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center flex-shrink-0">
-            <UserIcon className="w-4 h-4" />
+          <div className="w-8 h-8 rounded-xl bg-white text-black flex items-center justify-center flex-shrink-0 font-bold">
+            <UserIcon className="w-4 h-4 text-black" />
           </div>
           <div>
-            <span className="text-xs text-slate-500 font-medium">Pendaftaran Atas Nama:</span>
-            <span className="text-sm font-bold text-slate-900 block">{participantName}</span>
+            <span className="text-xs text-zinc-400 font-mono">Pendaftaran Atas Nama:</span>
+            <span className="text-sm font-bold text-white block">{participantName}</span>
           </div>
         </div>
         <button
           type="button"
           onClick={onBack}
-          className="text-xs font-semibold text-indigo-600 hover:text-indigo-800 transition-colors"
+          className="text-xs font-mono font-bold text-zinc-300 hover:text-white transition-colors underline"
         >
           Ubah Nama
         </button>
       </div>
 
       <div className="text-center space-y-2">
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight">
           Pilih Salah Satu Program Mentoring
         </h2>
-        <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-          Pilih program yang paling sesuai dengan ide proyekmu. Harga terpusat resmi dan sudah mencakup 5 sesi privat & Gemini Pro 3 bulan.
+        <p className="text-xs sm:text-sm text-zinc-400 max-w-lg mx-auto leading-relaxed">
+          Pilih program yang paling sesuai dengan ide proyekmu. Harga resmi terpusat mencakup 5 sesi privat & Gemini Pro 3 bulan.
         </p>
       </div>
 
@@ -85,10 +85,10 @@ export function ProgramSelectionStep({
             <div
               key={prog.slug}
               onClick={() => setSelectedSlug(prog.slug)}
-              className={`relative rounded-2xl cursor-pointer p-6 transition-all duration-200 flex flex-col justify-between border-2 text-left ${
+              className={`relative rounded-3xl cursor-pointer p-6 transition-all duration-300 flex flex-col justify-between border-2 text-left backdrop-blur-xl ${
                 isSelected
-                  ? 'border-indigo-600 bg-indigo-50/40 shadow-md ring-2 ring-indigo-500/20'
-                  : 'border-slate-200 bg-white hover:border-slate-300 hover:shadow-xs'
+                  ? 'border-white bg-white/10 shadow-2xl shadow-white/10 ring-2 ring-white/20'
+                  : 'border-white/10 bg-zinc-900/40 hover:border-white/25 hover:bg-zinc-900/60 shadow-xl'
               }`}
               role="radio"
               aria-checked={isSelected}
@@ -104,8 +104,8 @@ export function ProgramSelectionStep({
               {prog.popularBadge && (
                 <div className="mb-3">
                   <Badge
-                    variant={isIntegrasi ? 'featured' : 'secondary'}
-                    className="text-[10px] font-bold uppercase tracking-wider py-0.5 px-2.5"
+                    variant={isIntegrasi ? 'primary' : 'secondary'}
+                    className="text-[10px] font-mono font-bold uppercase tracking-wider py-0.5 px-2.5"
                   >
                     {isIntegrasi && <SparklesIcon className="w-3 h-3 mr-1" />}
                     {prog.popularBadge}
@@ -118,15 +118,15 @@ export function ProgramSelectionStep({
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-2">
                     <div
-                      className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                      className={`w-8 h-8 rounded-xl flex items-center justify-center font-bold ${
                         isSelected
-                          ? 'bg-indigo-600 text-white'
-                          : 'bg-slate-100 text-slate-700'
+                          ? 'bg-white text-black'
+                          : 'bg-white/10 text-white'
                       }`}
                     >
                       <ProgIcon className="w-4 h-4" />
                     </div>
-                    <h3 className="font-extrabold text-base text-slate-900 leading-snug">
+                    <h3 className="font-extrabold text-base text-white leading-snug">
                       {prog.name}
                     </h3>
                   </div>
@@ -135,53 +135,53 @@ export function ProgramSelectionStep({
                   <div
                     className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 transition-colors border ${
                       isSelected
-                        ? 'bg-indigo-600 border-indigo-600 text-white'
-                        : 'border-slate-300 bg-white'
+                        ? 'bg-white border-white text-black shadow-md shadow-white/30'
+                        : 'border-white/20 bg-zinc-950 text-transparent'
                     }`}
                   >
-                    {isSelected && <CheckIcon className="w-3.5 h-3.5" />}
+                    {isSelected && <CheckIcon className="w-3.5 h-3.5 text-black" />}
                   </div>
                 </div>
 
                 {/* Price Display */}
                 <div>
-                  <div className="text-2xl font-black text-slate-900 tracking-tight">
+                  <div className="text-2xl font-black text-white tracking-tight font-mono">
                     {formatRupiah(prog.price)}
                   </div>
-                  <div className="text-[11px] text-slate-500 font-medium">
+                  <div className="text-[11px] text-zinc-400 font-mono">
                     Total biaya untuk 5 kali pertemuan
                   </div>
                 </div>
 
-                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                <p className="text-xs text-zinc-400 leading-relaxed line-clamp-3">
                   {prog.description}
                 </p>
 
                 {/* Specs List */}
-                <div className="pt-3 border-t border-slate-100 space-y-1.5 text-xs text-slate-700">
+                <div className="pt-3 border-t border-white/10 space-y-1.5 text-xs text-zinc-300">
                   <div className="flex items-center gap-2">
-                    <ClockIcon className="w-3.5 h-3.5 text-indigo-600 flex-shrink-0" />
+                    <ClockIcon className="w-3.5 h-3.5 text-white flex-shrink-0" />
                     <span>5 sesi privat 1-on-1</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CalendarIcon className="w-3.5 h-3.5 text-indigo-600 flex-shrink-0" />
+                    <CalendarIcon className="w-3.5 h-3.5 text-white flex-shrink-0" />
                     <span>Jadwal fleksibel (disepakati)</span>
                   </div>
-                  <div className="flex items-center gap-2 text-indigo-900 font-semibold">
-                    <SparklesIcon className="w-3.5 h-3.5 text-indigo-600 flex-shrink-0" />
+                  <div className="flex items-center gap-2 text-white font-semibold bg-white/5 p-1.5 rounded-lg border border-white/10">
+                    <SparklesIcon className="w-3.5 h-3.5 text-white flex-shrink-0" />
                     <span>Bonus Gemini Pro 3 bulan</span>
                   </div>
                 </div>
               </div>
 
               {/* Bottom selection feedback */}
-              <div className="mt-5 pt-3 border-t border-slate-100 text-center">
+              <div className="mt-5 pt-3 border-t border-white/10 text-center">
                 <span
-                  className={`text-xs font-bold ${
-                    isSelected ? 'text-indigo-700' : 'text-slate-400'
+                  className={`text-xs font-mono font-bold ${
+                    isSelected ? 'text-white' : 'text-zinc-500'
                   }`}
                 >
-                  {isSelected ? '✓ Program Dipilih' : 'Klik untuk Memilih'}
+                  {isSelected ? '✓ PROGRAM DIPILIH' : 'KLIK UNTUK MEMILIH'}
                 </span>
               </div>
             </div>
@@ -194,9 +194,9 @@ export function ProgramSelectionStep({
         <button
           type="button"
           onClick={onBack}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 transition-all"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-zinc-300 bg-white/5 border border-white/15 hover:bg-white/10 transition-all cursor-pointer backdrop-blur-md"
         >
-          <ArrowLeftIcon className="w-4 h-4" />
+          <ArrowLeftIcon className="w-4 h-4 text-zinc-300" />
           <span>Kembali</span>
         </button>
 
@@ -204,10 +204,10 @@ export function ProgramSelectionStep({
           type="button"
           onClick={handleContinue}
           disabled={!selectedSlug}
-          className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white transition-all ${
+          className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all ${
             selectedSlug
-              ? 'bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-500/25 cursor-pointer'
-              : 'bg-slate-300 cursor-not-allowed opacity-75'
+              ? 'bg-white text-black hover:bg-zinc-200 shadow-lg shadow-white/15 cursor-pointer'
+              : 'bg-zinc-800 text-zinc-500 cursor-not-allowed border border-white/5'
           }`}
         >
           <span>Lanjut ke Pembayaran QRIS</span>

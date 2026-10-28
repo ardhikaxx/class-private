@@ -36,17 +36,17 @@ export function ProgramCard({ program }: ProgramCardProps) {
 
   return (
     <div
-      className={`relative rounded-3xl transition-all flex flex-col justify-between ${
+      className={`relative rounded-3xl transition-all duration-300 flex flex-col justify-between ${
         isIntegrasi
-          ? 'border-2 border-indigo-500 bg-white shadow-xl shadow-indigo-100 ring-4 ring-indigo-500/10'
-          : 'border border-slate-200 bg-white shadow-sm hover:border-slate-300'
+          ? 'border border-white/35 bg-zinc-900/80 backdrop-blur-2xl shadow-2xl shadow-black ring-1 ring-white/20'
+          : 'border border-white/10 bg-zinc-900/40 backdrop-blur-xl hover:border-white/25 shadow-xl'
       }`}
     >
       {program.popularBadge && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2">
           <Badge
-            variant={isIntegrasi ? 'featured' : 'secondary'}
-            className="text-[10px] font-bold uppercase tracking-wider px-3 py-0.5"
+            variant={isIntegrasi ? 'primary' : 'secondary'}
+            className="text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-0.5 border-white/20"
           >
             {isIntegrasi && <SparklesIcon className="w-3 h-3 mr-1" />}
             {program.popularBadge}
@@ -60,49 +60,47 @@ export function ProgramCard({ program }: ProgramCardProps) {
           <div
             className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${
               isIntegrasi
-                ? 'bg-indigo-600 text-white'
-                : program.slug === 'website'
-                ? 'bg-blue-100 text-blue-700'
-                : 'bg-violet-100 text-violet-700'
+                ? 'bg-white text-black font-bold shadow-md shadow-white/20'
+                : 'bg-white/10 text-white border border-white/15'
             }`}
           >
             <ProgramIcon className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 leading-snug">
+            <h3 className="text-lg sm:text-xl font-bold text-white leading-snug">
               {program.name}
             </h3>
-            <span className="text-[11px] text-slate-500 block">5 Pertemuan • 1-on-1</span>
+            <span className="text-[11px] text-zinc-400 font-mono block">5 Sesi • 1-on-1 Privat</span>
           </div>
         </div>
 
-        {/* Pricing */}
-        <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-baseline justify-between">
+        {/* Pricing in Glass */}
+        <div className="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 flex items-baseline justify-between backdrop-blur-md">
           <div>
-            <span className="text-2xl font-black text-slate-900 tracking-tight">
+            <span className="text-2xl font-black text-white tracking-tight font-mono">
               {formatRupiah(program.price)}
             </span>
-            <span className="text-xs text-slate-500 ml-1">/ total 5 sesi</span>
+            <span className="text-xs text-zinc-400 ml-1">/ 5 sesi</span>
           </div>
-          <span className="text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
-            QRIS Resmi
+          <span className="text-[10px] font-mono font-bold text-white bg-white/15 px-2 py-0.5 rounded-md border border-white/20">
+            QRIS DINAMIS
           </span>
         </div>
 
         {/* Short description */}
-        <p className="text-xs text-slate-600 leading-relaxed">
+        <p className="text-xs text-zinc-400 leading-relaxed">
           {program.description}
         </p>
 
         {/* Key Features */}
-        <div className="pt-2 border-t border-slate-100 space-y-2">
-          <span className="text-[11px] font-bold text-slate-800 uppercase tracking-wider block">
+        <div className="pt-2 border-t border-white/10 space-y-2">
+          <span className="text-[11px] font-mono font-bold text-zinc-300 uppercase tracking-wider block">
             Materi & Praktik:
           </span>
           <ul className="space-y-1.5">
             {program.curriculum.map((item, idx) => (
-              <li key={idx} className="flex items-start gap-2 text-xs text-slate-600 leading-relaxed">
-                <CheckIcon className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <li key={idx} className="flex items-start gap-2 text-xs text-zinc-300 leading-relaxed">
+                <CheckIcon className="w-3.5 h-3.5 text-white flex-shrink-0 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -110,17 +108,17 @@ export function ProgramCard({ program }: ProgramCardProps) {
         </div>
 
         {/* Quick Specs */}
-        <div className="pt-2 border-t border-slate-100 space-y-1 text-xs text-slate-700">
+        <div className="pt-2 border-t border-white/10 space-y-1 text-xs text-zinc-400">
           <div className="flex items-center gap-1.5">
-            <ClockIcon className="w-3.5 h-3.5 text-indigo-600 flex-shrink-0" />
+            <ClockIcon className="w-3.5 h-3.5 text-zinc-200 flex-shrink-0" />
             <span>5 sesi privat 1-on-1 intensif</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <CalendarIcon className="w-3.5 h-3.5 text-indigo-600 flex-shrink-0" />
+            <CalendarIcon className="w-3.5 h-3.5 text-zinc-200 flex-shrink-0" />
             <span>Jadwal fleksibel disepakati bersama</span>
           </div>
-          <div className="flex items-center gap-1.5 font-semibold text-indigo-900 bg-indigo-50/70 p-1.5 rounded-lg">
-            <SparklesIcon className="w-3.5 h-3.5 text-indigo-600 flex-shrink-0" />
+          <div className="flex items-center gap-1.5 font-semibold text-white bg-white/5 p-2 rounded-xl border border-white/10">
+            <SparklesIcon className="w-3.5 h-3.5 text-white flex-shrink-0" />
             <span>Bonus akses Gemini Pro 3 bulan</span>
           </div>
         </div>
@@ -132,8 +130,8 @@ export function ProgramCard({ program }: ProgramCardProps) {
           href={`/daftar?program=${program.slug}`}
           className={`w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all ${
             isIntegrasi
-              ? 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-500/25'
-              : 'bg-slate-900 hover:bg-slate-800 text-white'
+              ? 'bg-white text-black hover:bg-zinc-200 shadow-lg shadow-white/15'
+              : 'bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-md'
           }`}
         >
           <span>{buttonLabel}</span>

@@ -9,34 +9,34 @@ export function Footer() {
   const waUrl = buildWhatsAppConsultationUrl();
 
   return (
-    <footer className="bg-slate-900 text-slate-300 border-t border-slate-800">
+    <footer className="bg-black text-zinc-400 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white">
-                <LaptopIcon className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 rounded-xl bg-white text-black flex items-center justify-center font-black">
+                <LaptopIcon className="w-5 h-5 text-black" />
               </div>
-              <span className="font-bold text-xl text-white tracking-tight">
+              <span className="font-extrabold text-xl text-white tracking-tight">
                 {APP_CONFIG.name}
               </span>
             </div>
-            <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
+            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed max-w-sm">
               Program bimbingan privat 1-on-1 belajar membangun website, aplikasi mobile, atau integrasi keduanya sesuai ide proyek peserta. Praktik langsung, 5 pertemuan berjadwal fleksibel, dan pendampingan personal.
             </p>
-            <div className="flex items-center gap-2 text-xs text-slate-400">
-              <ShieldCheckIcon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-              <span>Pendampingan edukasi & bimbingan pembuatan proyek mandiri</span>
+            <div className="flex items-center gap-2 text-xs text-zinc-400 font-mono">
+              <ShieldCheckIcon className="w-4 h-4 text-white flex-shrink-0" />
+              <span>Pendampingan edukasi & bimbingan praktik mandiri</span>
             </div>
           </div>
 
           {/* Quick Nav */}
           <div className="md:col-span-3 space-y-3">
-            <h4 className="text-xs font-semibold text-white uppercase tracking-wider">
-              Navigasi Halaman
+            <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider">
+              NAVIGASI
             </h4>
-            <ul className="space-y-2 text-sm text-slate-400">
+            <ul className="space-y-2 text-xs sm:text-sm text-zinc-400">
               <li>
                 <Link href="/#solusi" className="hover:text-white transition-colors">
                   Kenapa Belajar Privat?
@@ -63,7 +63,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/daftar" className="text-indigo-400 hover:text-indigo-300 font-medium transition-colors">
+                <Link href="/daftar" className="text-white hover:underline font-semibold transition-colors">
                   Halaman Pendaftaran →
                 </Link>
               </li>
@@ -72,33 +72,33 @@ export function Footer() {
 
           {/* Program Choices */}
           <div className="md:col-span-4 space-y-3">
-            <h4 className="text-xs font-semibold text-white uppercase tracking-wider">
-              Konsultasi & Kontak
+            <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider">
+              KONSULTASI & KONTAK
             </h4>
-            <p className="text-sm text-slate-400">
-              Punya pertanyaan mengenai materi, ide proyek, atau kecocokan program? Hubungi pengajar langsung melalui WhatsApp:
+            <p className="text-xs sm:text-sm text-zinc-400">
+              Punya pertanyaan mengenai materi, ide proyek, atau kecocokan program? Hubungi pengajar langsung:
             </p>
             <div className="pt-1">
               <a
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold shadow-sm transition-all"
+                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white text-xs font-bold transition-all backdrop-blur-md"
               >
-                <WhatsAppIcon className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>Chat WhatsApp: {APP_CONFIG.whatsapp.displayNumber}</span>
               </a>
             </div>
-            <p className="text-xs text-slate-500 pt-2">
+            <p className="text-[11px] text-zinc-500 pt-1 font-mono">
               *Jadwal 5 sesi pertemuan disepakati bersama setelah pendaftaran & konfirmasi pembayaran.
             </p>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4 font-mono">
           <p>© {currentYear} {APP_CONFIG.name}. Hak Cipta Dilindungi.</p>
-          <p className="text-center sm:text-right">
-            Fasilitas Gemini Pro 3 Bulan disesuaikan dengan syarat & ketentuan layanan resmi penyedia.
+          <p className="text-center sm:text-right text-[11px]">
+            Fasilitas Gemini Pro 3 Bulan disesuaikan dengan ketentuan resmi penyedia.
           </p>
         </div>
       </div>
