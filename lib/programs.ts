@@ -27,24 +27,23 @@ export const PROGRAMS: Record<ProgramSlug, Program> = {
   website: {
     slug: 'website',
     name: 'Class Website',
-    tagline: 'Wujudkan ide website impian dari antarmuka hingga pengelolaan data',
+    tagline: 'Wujudkan ide website impian dari antarmuka hingga database',
     price: 250000,
     popularBadge: 'Paling Diminati',
     isFeatured: false,
     description:
-      'Program privat intensif untuk kamu yang ingin belajar membuat website fungsional sesuai kebutuhan proyekmu. Cocok untuk website portofolio, landing page produk, blog interaktif, atau sistem informasi web.',
+      'Belajar merancang dan membuat website fungsional sesuai kebutuhan idemu, dari tampilan responsif hingga pengelolaan data.',
     targetAudience:
-      'Mahasiswa, pelajar, calon developer web, atau siapa saja yang memiliki ide website dan butuh arahan teknis dari dasar hingga dapat dijalankan.',
+      'Mahasiswa, pelajar, atau pemula yang ingin membangun website portofolio, landing page, atau sistem web sederhana.',
     curriculum: [
-      'Perencanaan struktur halaman & alur navigasi pengguna (user flow)',
-      'Penyusunan antarmuka responsif modern (HTML/CSS/Tailwind UI)',
-      'Pengembangan frontend interaktif & manipulasi data dinamis',
-      'Dasar backend, API, & pengelolaan database sesuai ide proyek',
-      'Panduan pengujian, debugging, serta cara menjalankan website hingga online'
+      'Perencanaan struktur halaman & alur pengguna',
+      'Desain antarmuka responsif & modern',
+      'Pengembangan frontend & backend dasar',
+      'Pengelolaan database & pengujian sistem'
     ],
     meetingsCount: 5,
-    durationLabel: '5 kali pertemuan privat (1-on-1)',
-    scheduleLabel: 'Jadwal fleksibel (disepakati bersama pengajar & peserta)',
+    durationLabel: '5 sesi pertemuan privat (1-on-1)',
+    scheduleLabel: 'Jadwal fleksibel disepakati bersama',
     bonusFacility: 'Akses Gemini Pro selama 3 bulan',
     accentColor: {
       bg: 'bg-blue-50/70',
@@ -57,24 +56,23 @@ export const PROGRAMS: Record<ProgramSlug, Program> = {
   mobile: {
     slug: 'mobile',
     name: 'Class Aplikasi Mobile',
-    tagline: 'Bangun aplikasi Android/iOS siap pakai sesuai ide & fitur kebutuhanmu',
+    tagline: 'Bangun aplikasi Android/iOS siap pakai sesuai ide kebutuhanmu',
     price: 300000,
     popularBadge: 'Pilihan Populer',
     isFeatured: false,
     description:
-      'Program privat intensif untuk belajar membangun aplikasi mobile dari konsep hingga dapat dipasang di smartphone. Pembahasan mencakup antarmuka layar sentuh, alur aplikasi, serta penanganan data.',
+      'Belajar membangun aplikasi mobile dari konsep desain layar hingga siap diuji coba dan dipasang di smartphone.',
     targetAudience:
-      'Pelajar, mahasiswa, atau kreator yang ingin membuat aplikasi mobile untuk portofolio, tugas akhir, maupun prototipe bisnis.',
+      'Peserta yang ingin membuat aplikasi mobile untuk portofolio, tugas akhir, atau prototipe bisnis.',
     curriculum: [
-      'Perancangan alur fitur & layout antarmuka aplikasi mobile yang nyaman',
-      'Navigasi antarlayar (stack & tab navigation) dan layout responsif',
-      'Manajemen state aplikasi, input form, & interaksi pengguna',
-      'Pengolahan data lokal serta integrasi API eksternal bila dibutuhkan',
-      'Pengujian aplikasi di emulator/smartphone & panduan build project'
+      'Perancangan alur fitur & layout antarmuka mobile',
+      'Navigasi antarlayar & layout responsif',
+      'Manajemen state & interaksi pengguna',
+      'Pengolahan data & pengujian di device'
     ],
     meetingsCount: 5,
-    durationLabel: '5 kali pertemuan privat (1-on-1)',
-    scheduleLabel: 'Jadwal fleksibel (disepakati bersama pengajar & peserta)',
+    durationLabel: '5 sesi pertemuan privat (1-on-1)',
+    scheduleLabel: 'Jadwal fleksibel disepakati bersama',
     bonusFacility: 'Akses Gemini Pro selama 3 bulan',
     accentColor: {
       bg: 'bg-violet-50/70',
@@ -87,24 +85,23 @@ export const PROGRAMS: Record<ProgramSlug, Program> = {
   integrasi: {
     slug: 'integrasi',
     name: 'Class Integrasi Website dan Aplikasi Mobile',
-    tagline: 'Solusi terlengkap: bangun ekosistem website & mobile dengan data terhubung',
+    tagline: 'Solusi terlengkap: website & mobile terhubung dengan data terpusat',
     price: 450000,
     popularBadge: 'Paling Komprehensif',
     isFeatured: true,
     description:
-      'Program privat terlengkap untuk peserta yang ingin membangun website dan aplikasi mobile yang saling tersinkronisasi. Mempelajari bagaimana web client dan mobile client berbagi data melalui satu backend & database yang sama.',
+      'Solusi terlengkap untuk membangun ekosistem digital: website dan aplikasi mobile yang saling terhubung lewat shared backend & database.',
     targetAudience:
-      'Peserta yang ingin membangun sistem lengkap dengan panel web (misal: admin dashboard atau portal) sekaligus aplikasi mobile bagi pengguna akhir.',
+      'Peserta dengan ide sistem terpadu (misal: panel web admin dan aplikasi mobile client yang berbagi data yang sama).',
     curriculum: [
-      'Perancangan arsitektur sistem terintegrasi (Web + Mobile + Shared Backend)',
-      'Pembuatan REST API / backend terpadu & perancangan basis data bersama',
-      'Komunikasi data real-time, autentikasi pengguna, & sinkronisasi state',
-      'Pengelolaan hak akses pengguna antara antarmuka web dan mobile',
-      'Pengujian alur menyeluruh (end-to-end testing) dan troubleshooting integrasi'
+      'Perancangan arsitektur terintegrasi (Web + Mobile)',
+      'Pembuatan REST API & basis data bersama',
+      'Sinkronisasi data real-time & autentikasi pengguna',
+      'Pengujian alur menyeluruh (end-to-end)'
     ],
     meetingsCount: 5,
-    durationLabel: '5 kali pertemuan privat (1-on-1)',
-    scheduleLabel: 'Jadwal fleksibel (disepakati bersama pengajar & peserta)',
+    durationLabel: '5 sesi pertemuan privat (1-on-1)',
+    scheduleLabel: 'Jadwal fleksibel disepakati bersama',
     bonusFacility: 'Akses Gemini Pro selama 3 bulan',
     accentColor: {
       bg: 'bg-indigo-50/80',
