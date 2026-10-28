@@ -91,7 +91,6 @@ class-private/
 │   └── qris.jpeg                        # Gambar kode QRIS resmi penyedia
 ├── types/
 │   └── registration.ts                  # Definisi tipe data TypeScript pendaftaran
-├── .env.example                         # Contoh variabel lingkungan
 ├── package.json
 ├── tsconfig.json
 └── README.md
@@ -111,25 +110,12 @@ Jalankan perintah berikut di terminal root proyek:
 npm install
 ```
 
-### 2. Konfigurasi Lingkungan (.env.local)
-Salin berkas `.env.example` menjadi `.env.local`:
-```bash
-cp .env.example .env.local
-```
+### 2. Konfigurasi Terpusat (Hardcoded di Kode)
+Seluruh konfigurasi utama (nomor WhatsApp pengajar, nama program, harga, bonus Gemini Pro, dan gambar QRIS) sudah terkonfigurasi secara terpusat langsung di dalam kode:
+- **`lib/config.ts`**: Nomor WhatsApp pengajar (`6285933648537`), path gambar QRIS (`/qris.jpeg`), nama aplikasi, dan metadata.
+- **`lib/programs.ts`**: Daftar 3 program resmi, harga dalam Rupiah, durasi 5 sesi, dan kurikulum.
 
-Isi variabel sesuai kebutuhan:
-```env
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-NEXT_PUBLIC_WHATSAPP_NUMBER=6285933648537
-PAYMENT_PROVIDER=static_qris
-```
-
-| Variabel | Wajib / Opsional | Keterangan |
-| :--- | :--- | :--- |
-| `NEXT_PUBLIC_SITE_URL` | Opsional di dev, Wajib di prod | Domain publik aplikasi web |
-| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Opsional (default ada di config) | Nomor WhatsApp tujuan konfirmasi |
-| `PAYMENT_PROVIDER` | Opsional (default `static_qris`) | Mode pembayaran: `static_qris` atau `dynamic` |
-| `PAYMENT_GATEWAY_API_KEY` | Opsional | Secret key jika beralih ke dynamic gateway |
+Tidak memerlukan berkas `.env` eksternal untuk menjalankan aplikasi.
 
 ### 3. Menjalankan Server Development
 ```bash
