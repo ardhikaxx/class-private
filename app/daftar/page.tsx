@@ -10,7 +10,10 @@ import { APP_CONFIG } from '@/lib/config';
 export const metadata: Metadata = {
   title: `Pendaftaran — ${APP_CONFIG.name}`,
   description:
-    'Formulir pendaftaran resmi Private Coding Class. Pilih program website, mobile, atau integrasi, dapatkan kode QRIS pembayaran, dan konfirmasi via WhatsApp.'
+    'Formulir pendaftaran resmi Private Coding Class. Pilih program website, mobile, atau integrasi, dapatkan kode QRIS pembayaran, dan konfirmasi via WhatsApp.',
+  alternates: {
+    canonical: '/daftar'
+  }
 };
 
 export default function DaftarPage() {

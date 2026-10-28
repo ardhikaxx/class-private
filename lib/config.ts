@@ -29,7 +29,7 @@ export const APP_CONFIG = {
 
   // Social & Meta
   metadata: {
-    siteUrl: 'http://localhost:3000',
+    siteUrl: 'https://class-private.vercel.app',
     title: 'Private Coding Class — Bimbingan Privat Bikin Website & Aplikasi',
     description:
       'Wujudkan ide website dan aplikasi kamu lewat private coding class. Belajar praktik 1-on-1, materi sesuai kebutuhan ide proyek, 5 sesi fleksibel, plus akses Gemini Pro 3 bulan.'

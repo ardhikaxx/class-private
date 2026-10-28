@@ -74,40 +74,47 @@ export function HeroSection() {
 
           {/* Right Column: Clean Program Summary Card */}
           <div className="lg:col-span-5">
-            <div className="rounded-3xl border border-white/10 bg-zinc-900/60 backdrop-blur-2xl p-6 shadow-2xl space-y-3 max-w-md mx-auto">
+            <div className="rounded-3xl border border-white/10 bg-zinc-900/60 backdrop-blur-2xl p-6 shadow-2xl space-y-3 w-full max-w-md lg:max-w-lg mx-auto">
               <div className="border-b border-white/10 pb-3">
                 <span className="text-xs font-mono text-zinc-400 uppercase tracking-widest block">
                   PROGRAM KELAS
                 </span>
               </div>
 
-              <div className="space-y-2">
-                {ALL_PROGRAMS.map((p) => (
-                  <Link
-                    key={p.slug}
-                    href={`/daftar?program=${p.slug}`}
-                    className="group flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/25 hover:bg-white/[0.06] transition-all"
-                  >
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="w-9 h-9 rounded-xl bg-white/10 text-white flex items-center justify-center font-bold shrink-0">
-                        <ProgramHeroIcon slug={p.slug} className="w-4 h-4 text-white" />
-                      </div>
-                      <div className="min-w-0">
-                        <div className="text-sm font-bold text-white group-hover:text-zinc-200 leading-snug">
-                          {p.name}
+              <div className="space-y-2.5">
+                {ALL_PROGRAMS.map((p) => {
+                  const displayName =
+                    p.slug === 'integrasi'
+                      ? 'Class Integrasi Web & Mobile'
+                      : p.name;
+
+                  return (
+                    <Link
+                      key={p.slug}
+                      href={`/daftar?program=${p.slug}`}
+                      className="group flex items-center justify-between gap-4 p-3.5 sm:p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/25 hover:bg-white/[0.06] transition-all"
+                    >
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className="w-9 h-9 rounded-xl bg-white/10 text-white flex items-center justify-center font-bold shrink-0">
+                          <ProgramHeroIcon slug={p.slug} className="w-4 h-4 text-white" />
                         </div>
-                        <div className="text-[11px] text-zinc-400 font-mono">
-                          5 Sesi Privat
+                        <div className="min-w-0">
+                          <div className="text-sm font-bold text-white group-hover:text-zinc-200 truncate">
+                            {displayName}
+                          </div>
+                          <div className="text-[11px] text-zinc-400 font-mono">
+                            5 Sesi Privat
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="text-right shrink-0">
-                      <div className="text-sm font-black text-white font-mono whitespace-nowrap">
-                        {formatRupiah(p.price)}
+                      <div className="text-right shrink-0">
+                        <div className="text-sm sm:text-base font-black text-white font-mono whitespace-nowrap">
+                          {formatRupiah(p.price)}
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                ))}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
