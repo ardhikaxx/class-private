@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { Program, formatRupiah } from '@/lib/programs';
+import { Program, formatRupiah, ProgramSlug } from '@/lib/programs';
 import {
   CheckIcon,
-  LaptopIcon,
-  SmartphoneIcon,
-  LayersIcon,
+  WebBrowserIcon,
+  MobileDeviceIcon,
+  IntegrationIcon,
   ArrowRightIcon
 } from '@/components/ui/Icons';
 
@@ -13,15 +13,14 @@ interface ProgramCardProps {
   program: Program;
 }
 
+function ProgramIcon({ slug, className = 'w-5 h-5' }: { slug: ProgramSlug; className?: string }) {
+  if (slug === 'website') return <WebBrowserIcon className={className} />;
+  if (slug === 'mobile') return <MobileDeviceIcon className={className} />;
+  return <IntegrationIcon className={className} />;
+}
+
 export function ProgramCard({ program }: ProgramCardProps) {
   const isIntegrasi = program.slug === 'integrasi';
-
-  const ProgramIcon =
-    program.slug === 'website'
-      ? LaptopIcon
-      : program.slug === 'mobile'
-      ? SmartphoneIcon
-      : LayersIcon;
 
   return (
     <div
@@ -33,15 +32,15 @@ export function ProgramCard({ program }: ProgramCardProps) {
     >
       {/* Details */}
       <div className="p-6 sm:p-7 space-y-4">
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-3">
           <div
-            className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${
+            className={`w-11 h-11 rounded-2xl flex items-center justify-center flex-shrink-0 ${
               isIntegrasi
                 ? 'bg-white text-black font-bold shadow-md shadow-white/20'
-                : 'bg-white/10 text-white'
+                : 'bg-white/10 text-white border border-white/10'
             }`}
           >
-            <ProgramIcon className="w-5 h-5" />
+            <ProgramIcon slug={program.slug} className="w-5 h-5" />
           </div>
           <div>
             <h3 className="text-base sm:text-lg font-bold text-white">

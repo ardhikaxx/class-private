@@ -1,14 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 import { buildWhatsAppConsultationUrl } from '@/lib/whatsapp';
-import { ALL_PROGRAMS, formatRupiah } from '@/lib/programs';
+import { ALL_PROGRAMS, formatRupiah, ProgramSlug } from '@/lib/programs';
 import {
   WhatsAppIcon,
   ArrowRightIcon,
-  LaptopIcon,
-  SmartphoneIcon,
-  LayersIcon
+  WebBrowserIcon,
+  MobileDeviceIcon,
+  IntegrationIcon
 } from '@/components/ui/Icons';
+
+function ProgramHeroIcon({ slug, className = 'w-4 h-4' }: { slug: ProgramSlug; className?: string }) {
+  if (slug === 'website') return <WebBrowserIcon className={className} />;
+  if (slug === 'mobile') return <MobileDeviceIcon className={className} />;
+  return <IntegrationIcon className={className} />;
+}
 
 export function HeroSection() {
   const waUrl = buildWhatsAppConsultationUrl();
@@ -69,41 +75,32 @@ export function HeroSection() {
               </div>
 
               <div className="space-y-2">
-                {ALL_PROGRAMS.map((p) => {
-                  const Icon =
-                    p.slug === 'website'
-                      ? LaptopIcon
-                      : p.slug === 'mobile'
-                      ? SmartphoneIcon
-                      : LayersIcon;
-
-                  return (
-                    <Link
-                      key={p.slug}
-                      href={`/daftar?program=${p.slug}`}
-                      className="group flex items-center justify-between p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/25 hover:bg-white/[0.06] transition-all"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-xl bg-white/10 text-white flex items-center justify-center font-bold">
-                          <Icon className="w-4 h-4 text-white" />
+                {ALL_PROGRAMS.map((p) => (
+                  <Link
+                    key={p.slug}
+                    href={`/daftar?program=${p.slug}`}
+                    className="group flex items-center justify-between p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/25 hover:bg-white/[0.06] transition-all"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-xl bg-white/10 text-white flex items-center justify-center font-bold">
+                        <ProgramHeroIcon slug={p.slug} className="w-4 h-4 text-white" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-white group-hover:text-zinc-200">
+                          {p.name}
                         </div>
-                        <div>
-                          <div className="text-sm font-bold text-white group-hover:text-zinc-200">
-                            {p.name}
-                          </div>
-                          <div className="text-[11px] text-zinc-400 font-mono">
-                            5 Sesi Privat
-                          </div>
+                        <div className="text-[11px] text-zinc-400 font-mono">
+                          5 Sesi Privat
                         </div>
                       </div>
-                      <div className="text-right">
-                        <div className="text-sm font-black text-white font-mono">
-                          {formatRupiah(p.price)}
-                        </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm font-black text-white font-mono">
+                        {formatRupiah(p.price)}
                       </div>
-                    </Link>
-                  );
-                })}
+                    </div>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

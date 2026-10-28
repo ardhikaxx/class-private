@@ -240,3 +240,41 @@ export function DownloadIcon({ className = 'w-4 h-4' }: { className?: string }) 
   );
 }
 
+export function WebBrowserIcon({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+      <rect x="2" y="3" width="20" height="18" rx="4" />
+      <path strokeLinecap="round" d="M2 8h20" />
+      <circle cx="5.5" cy="5.5" r="0.75" fill="currentColor" stroke="none" />
+      <circle cx="8.5" cy="5.5" r="0.75" fill="currentColor" stroke="none" />
+      <circle cx="11.5" cy="5.5" r="0.75" fill="currentColor" stroke="none" />
+      <path strokeLinecap="round" d="M6 12h6m-6 3h9m-9 3h4" />
+    </svg>
+  );
+}
+
+export function MobileDeviceIcon({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+      <rect x="5" y="2" width="14" height="20" rx="3.5" />
+      <path strokeLinecap="round" d="M10 5h4" />
+      <path strokeLinecap="round" d="M10 19h4" />
+      <path strokeLinecap="round" d="M8.5 9h7m-7 3h7m-7 3h4" strokeDasharray="0.5 0.5" />
+    </svg>
+  );
+}
+
+export function IntegrationIcon({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+      <rect x="2" y="4" width="13" height="10" rx="2" />
+      <path strokeLinecap="round" d="M2 11h13M5 14l-1 3h7l-1-3" />
+      <rect x="13.5" y="8" width="8.5" height="13" rx="2.5" fill="#09090b" />
+      <rect x="13.5" y="8" width="8.5" height="13" rx="2.5" />
+      <circle cx="17.75" cy="18.5" r="0.75" fill="currentColor" stroke="none" />
+      <path strokeLinecap="round" d="M16 10.5h3.5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 7.5h3m-1.5-1.5l1.5 1.5-1.5 1.5" />
+    </svg>
+  );
+}
+
