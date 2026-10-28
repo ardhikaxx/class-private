@@ -6,12 +6,21 @@ import { APP_CONFIG } from '@/lib/config';
 import { buildWhatsAppConsultationUrl } from '@/lib/whatsapp';
 import { MenuIcon, XIcon, WhatsAppIcon, LaptopIcon } from '@/components/ui/Icons';
 
-export function Navbar() {
+interface NavbarProps {
+  hideOnMobile?: boolean;
+  className?: string;
+}
+
+export function Navbar({ hideOnMobile = true, className = '' }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const waConsultUrl = buildWhatsAppConsultationUrl();
 
+  const mobileVisibilityClass = hideOnMobile ? 'hidden md:block' : '';
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-zinc-950/70 backdrop-blur-2xl transition-all">
+    <header
+      className={`sticky top-0 z-50 w-full border-b border-white/10 bg-zinc-950/70 backdrop-blur-2xl transition-all ${mobileVisibilityClass} ${className}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Brand Logo */}
@@ -69,29 +78,31 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-2">
-            <Link
-              href="/daftar"
-              className="inline-flex sm:hidden items-center justify-center px-3 py-1.5 rounded-lg text-xs font-bold text-black bg-white hover:bg-zinc-200 transition-all"
-            >
-              Daftar
-            </Link>
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-zinc-300 hover:text-white hover:bg-white/10 transition-colors"
-              aria-expanded={mobileMenuOpen}
-              aria-label="Buka menu navigasi"
-            >
-              {mobileMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
-            </button>
-          </div>
+          {/* Mobile Menu Button (rendered only when not hidden on mobile) */}
+          {!hideOnMobile && (
+            <div className="flex md:hidden items-center gap-2">
+              <Link
+                href="/daftar"
+                className="inline-flex sm:hidden items-center justify-center px-3 py-1.5 rounded-lg text-xs font-bold text-black bg-white hover:bg-zinc-200 transition-all"
+              >
+                Daftar
+              </Link>
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 rounded-lg text-zinc-300 hover:text-white hover:bg-white/10 transition-colors"
+                aria-expanded={mobileMenuOpen}
+                aria-label="Buka menu navigasi"
+              >
+                {mobileMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
-      {mobileMenuOpen && (
+      {/* Mobile Drawer Menu (rendered only when not hidden on mobile) */}
+      {!hideOnMobile && mobileMenuOpen && (
         <div className="md:hidden border-t border-white/10 bg-zinc-950/95 backdrop-blur-2xl px-4 pt-4 pb-6 space-y-3">
           <nav className="flex flex-col space-y-3 text-sm font-medium text-zinc-200">
             <Link

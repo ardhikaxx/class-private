@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { buildWhatsAppConsultationUrl } from '@/lib/whatsapp';
 import { ALL_PROGRAMS, formatRupiah, ProgramSlug } from '@/lib/programs';
+import { APP_CONFIG } from '@/lib/config';
 import {
   WhatsAppIcon,
   ArrowRightIcon,
@@ -28,9 +29,15 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column */}
           <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
-            <span className="text-xs font-mono text-zinc-400 tracking-widest uppercase block">
-              1-on-1 Mentoring • 5 Sesi Privat
-            </span>
+            <div className="flex items-center justify-center lg:justify-start gap-2">
+              <span className="text-xs font-mono font-bold text-white tracking-wider uppercase">
+                {APP_CONFIG.name}
+              </span>
+              <span className="text-zinc-600">•</span>
+              <span className="text-xs font-mono text-zinc-400 tracking-wide">
+                1-on-1 Mentoring
+              </span>
+            </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.15]">
               Belajar Bikin Website & Aplikasi Sesuai{' '}
