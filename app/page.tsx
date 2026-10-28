@@ -11,7 +11,7 @@ import { FinalCTASection } from '@/components/landing/FinalCTASection';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-indigo-100 selection:text-indigo-800">
+    <div id="top" className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-indigo-100 selection:text-indigo-800">
       <Navbar />
       <main className="flex-1">
         <HeroSection />

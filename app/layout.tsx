@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { APP_CONFIG } from '@/lib/config';
+import { FloatingNavBottom } from '@/components/layout/FloatingNavBottom';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -58,8 +59,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased h-full`}>
-      <body className="min-h-full flex flex-col font-sans bg-white text-slate-900">
+      <body className="min-h-full flex flex-col font-sans bg-white text-slate-900 pb-20 md:pb-0">
         {children}
+        <FloatingNavBottom />
       </body>
     </html>
   );
