@@ -307,10 +307,10 @@ export function RegistrationWizard() {
 
       {/* STEP 3: Order Summary & QRIS Payment */}
       {state.step === 3 && selectedProgram && state.transaction && (
-        <div className="max-w-6xl mx-auto space-y-8">
+        <div className="max-w-5xl mx-auto space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* On mobile: Order Summary comes first so user knows exact amount */}
-            <div className="lg:col-span-5 order-1 lg:order-2 space-y-6">
+            <div className="lg:col-span-6 order-1 lg:order-2 space-y-6">
               <OrderSummary
                 participantName={state.participantName}
                 program={selectedProgram}
@@ -322,7 +322,7 @@ export function RegistrationWizard() {
             </div>
 
             {/* QRIS Display Panel */}
-            <div className="lg:col-span-7 order-2 lg:order-1">
+            <div className="lg:col-span-6 order-2 lg:order-1">
               <QRISPaymentPanel
                 program={selectedProgram}
                 transaction={state.transaction}
