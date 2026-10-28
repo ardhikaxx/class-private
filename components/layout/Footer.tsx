@@ -15,7 +15,7 @@ export function Footer() {
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white text-black flex items-center justify-center font-black">
+              <div className="w-10 h-10 rounded-xl bg-white text-black flex items-center justify-center font-black shrink-0">
                 <LaptopIcon className="w-5 h-5 text-black" />
               </div>
               <span className="font-extrabold text-xl text-white tracking-tight">

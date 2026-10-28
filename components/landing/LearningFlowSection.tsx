@@ -60,7 +60,7 @@ export function LearningFlowSection() {
                 className="rounded-3xl bg-zinc-900/40 border border-white/10 backdrop-blur-xl p-5 hover:border-white/20 transition-all space-y-2.5"
               >
                 <div className="flex items-center justify-between">
-                  <div className="w-8 h-8 rounded-xl bg-white text-black flex items-center justify-center font-bold">
+                  <div className="w-8 h-8 rounded-xl bg-white text-black flex items-center justify-center font-bold shrink-0">
                     <Icon className="w-4 h-4 text-black" />
                   </div>
                   <span className="text-xs font-mono font-bold text-zinc-500">{s.step}</span>

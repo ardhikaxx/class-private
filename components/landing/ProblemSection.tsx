@@ -45,7 +45,7 @@ export function ProblemSection() {
                 key={idx}
                 className="rounded-3xl border border-white/10 bg-zinc-900/40 backdrop-blur-xl p-6 shadow-xl hover:border-white/25 transition-all space-y-3"
               >
-                <div className="w-10 h-10 rounded-2xl bg-white text-black flex items-center justify-center font-bold">
+                <div className="w-10 h-10 rounded-2xl bg-white text-black flex items-center justify-center font-bold shrink-0">
                   <Icon className="w-5 h-5 text-black" />
                 </div>
 

@@ -107,7 +107,7 @@ export function ProgramSelectionStep({
                 {/* Top Row: Custom Icon + Radio Selection Indicator */}
                 <div className="flex items-center justify-between">
                   <div
-                    className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all ${
+                    className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all shrink-0 ${
                       isSelected
                         ? 'bg-white text-zinc-950 shadow-md shadow-white/20'
                         : 'bg-white/10 text-white border border-white/10 group-hover:bg-white/15'

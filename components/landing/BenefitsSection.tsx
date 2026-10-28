@@ -54,7 +54,7 @@ export function BenefitsSection() {
                 key={idx}
                 className="p-5 sm:p-6 rounded-3xl border border-white/10 bg-zinc-900/40 backdrop-blur-xl hover:border-white/20 transition-all space-y-2.5"
               >
-                <div className="w-10 h-10 rounded-2xl bg-white text-black flex items-center justify-center font-bold">
+                <div className="w-10 h-10 rounded-2xl bg-white text-black flex items-center justify-center font-bold shrink-0">
                   <Icon className="w-5 h-5 text-black" />
                 </div>
                 <h3 className="text-sm sm:text-base font-bold text-white">

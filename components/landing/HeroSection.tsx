@@ -86,14 +86,14 @@ export function HeroSection() {
                   <Link
                     key={p.slug}
                     href={`/daftar?program=${p.slug}`}
-                    className="group flex items-center justify-between p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/25 hover:bg-white/[0.06] transition-all"
+                    className="group flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/25 hover:bg-white/[0.06] transition-all"
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-xl bg-white/10 text-white flex items-center justify-center font-bold">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-9 h-9 rounded-xl bg-white/10 text-white flex items-center justify-center font-bold shrink-0">
                         <ProgramHeroIcon slug={p.slug} className="w-4 h-4 text-white" />
                       </div>
-                      <div>
-                        <div className="text-sm font-bold text-white group-hover:text-zinc-200">
+                      <div className="min-w-0">
+                        <div className="text-sm font-bold text-white group-hover:text-zinc-200 leading-snug">
                           {p.name}
                         </div>
                         <div className="text-[11px] text-zinc-400 font-mono">
@@ -101,8 +101,8 @@ export function HeroSection() {
                         </div>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="text-sm font-black text-white font-mono">
+                    <div className="text-right shrink-0">
+                      <div className="text-sm font-black text-white font-mono whitespace-nowrap">
                         {formatRupiah(p.price)}
                       </div>
                     </div>

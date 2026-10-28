@@ -25,7 +25,7 @@ export function Navbar({ hideOnMobile = true, className = '' }: NavbarProps) {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group focus:outline-none rounded-lg p-1">
-            <div className="w-10 h-10 rounded-xl bg-white text-black flex items-center justify-center font-black shadow-md shadow-white/10 group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-white text-black flex items-center justify-center font-black shadow-md shadow-white/10 group-hover:scale-105 transition-transform shrink-0">
               <LaptopIcon className="w-5 h-5 text-black" />
             </div>
             <div>
