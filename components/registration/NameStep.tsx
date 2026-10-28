@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { UserIcon, ArrowRightIcon, AlertCircleIcon, ShieldCheckIcon } from '@/components/ui/Icons';
+import { ArrowRightIcon, AlertCircleIcon } from '@/components/ui/Icons';
 import { validateParticipantName } from '@/lib/transactions';
 
 interface NameStepProps {
@@ -39,22 +39,19 @@ export function NameStep({ initialName, onNext }: NameStepProps) {
 
   return (
     <div className="max-w-xl mx-auto bg-zinc-900/60 border border-white/15 backdrop-blur-2xl rounded-3xl p-6 sm:p-8 shadow-2xl text-white space-y-6">
-      <div className="text-center space-y-2 mb-4">
-        <div className="w-12 h-12 rounded-2xl bg-white text-black flex items-center justify-center mx-auto mb-3 shadow-lg shadow-white/10 font-bold">
-          <UserIcon className="w-6 h-6 text-black" />
-        </div>
-        <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight">
-          Masukkan Nama Lengkap Peserta
+      <div className="text-center space-y-1.5 mb-2">
+        <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+          Nama Lengkap Peserta
         </h2>
-        <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed max-w-md mx-auto">
-          Nama ini akan dicantumkan pada konfirmasi WhatsApp dan sesi bimbingan bersama pengajar.
+        <p className="text-xs sm:text-sm text-zinc-400">
+          Masukkan nama untuk dicantumkan pada sesi privat dan konfirmasi.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-5">
         <div>
-          <label htmlFor="participantName" className="block text-xs font-mono font-bold text-zinc-300 uppercase tracking-wider mb-2">
-            NAMA LENGKAP <span className="text-white">*</span>
+          <label htmlFor="participantName" className="block text-xs font-mono font-medium text-zinc-300 uppercase tracking-wider mb-2">
+            NAMA LENGKAP
           </label>
           <div className="relative">
             <input
@@ -72,9 +69,6 @@ export function NameStep({ initialName, onNext }: NameStepProps) {
                   : 'border-white/20 focus:border-white focus:ring-white'
               }`}
             />
-            <div className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs font-mono text-zinc-500 pointer-events-none">
-              {name.trim().length}/60
-            </div>
           </div>
 
           {error && (
@@ -83,26 +77,18 @@ export function NameStep({ initialName, onNext }: NameStepProps) {
               <span>{error}</span>
             </div>
           )}
-          <p className="text-[11px] text-zinc-500 mt-2">
-            Minimal 3 karakter. Hanya meminta nama lengkap untuk efisiensi tanpa meminta data pribadi sensitif.
-          </p>
         </div>
 
-        <div className="pt-2">
+        <div className="pt-1">
           <button
             type="submit"
-            className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl text-xs sm:text-sm font-extrabold text-black bg-white hover:bg-zinc-200 shadow-lg shadow-white/10 transition-all cursor-pointer"
+            className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl text-xs sm:text-sm font-bold text-black bg-white hover:bg-zinc-200 shadow-lg shadow-white/10 transition-all cursor-pointer"
           >
-            <span>Lanjutkan ke Pemilihan Program</span>
+            <span>Lanjut Pilih Program</span>
             <ArrowRightIcon className="w-4 h-4 text-black" />
           </button>
         </div>
       </form>
-
-      <div className="pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-xs text-zinc-500 font-mono">
-        <ShieldCheckIcon className="w-4 h-4 text-white flex-shrink-0" />
-        <span>Data aman untuk keperluan bimbingan 1-on-1</span>
-      </div>
     </div>
   );
 }

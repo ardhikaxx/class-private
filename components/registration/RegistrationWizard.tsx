@@ -278,13 +278,13 @@ export function RegistrationWizard() {
       {/* Loading Overlay when generating transaction */}
       {isLoading && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-md z-50 flex items-center justify-center p-4">
-          <div className="bg-zinc-900/90 border border-white/15 rounded-3xl p-8 max-w-sm w-full text-center space-y-4 shadow-2xl backdrop-blur-2xl">
-            <div className="w-12 h-12 border-3 border-white border-t-transparent rounded-full animate-spin mx-auto" />
+          <div className="bg-zinc-900/90 border border-white/15 rounded-3xl p-8 max-w-sm w-full text-center space-y-3 shadow-2xl backdrop-blur-2xl">
+            <div className="w-10 h-10 border-2 border-white border-t-transparent rounded-full animate-spin mx-auto" />
             <h3 className="font-bold text-white text-base tracking-tight">
-              Menyiapkan Tagihan & QRIS Dinamis...
+              Menyiapkan Pembayaran...
             </h3>
-            <p className="text-xs text-zinc-400 leading-relaxed">
-              Mengunci nominal tagihan resmi dan mengonversi QRIS dengan checksum EMVCo.
+            <p className="text-xs text-zinc-400">
+              Mohon tunggu sebentar.
             </p>
           </div>
         </div>

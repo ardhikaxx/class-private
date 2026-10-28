@@ -23,11 +23,11 @@ export function Footer() {
               </span>
             </div>
             <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed max-w-sm">
-              Program bimbingan privat 1-on-1 belajar membangun website, aplikasi mobile, atau integrasi keduanya sesuai ide proyek peserta. Praktik langsung, 5 pertemuan berjadwal fleksibel, dan pendampingan personal.
+              Bimbingan privat 1-on-1 belajar membangun website, aplikasi mobile, dan integrasi sesuai ide proyek peserta dengan jadwal fleksibel.
             </p>
             <div className="flex items-center gap-2 text-xs text-zinc-400 font-mono">
               <ShieldCheckIcon className="w-4 h-4 text-white flex-shrink-0" />
-              <span>Pendampingan edukasi & bimbingan praktik mandiri</span>
+              <span>Pendampingan bimbingan praktik mandiri</span>
             </div>
           </div>
 
@@ -39,17 +39,17 @@ export function Footer() {
             <ul className="space-y-2 text-xs sm:text-sm text-zinc-400">
               <li>
                 <Link href="/#solusi" className="hover:text-white transition-colors">
-                  Kenapa Belajar Privat?
+                  Kenapa Privat?
                 </Link>
               </li>
               <li>
                 <Link href="/#program" className="hover:text-white transition-colors">
-                  Pilihan Program & Biaya
+                  Program & Biaya
                 </Link>
               </li>
               <li>
                 <Link href="/#fasilitas" className="hover:text-white transition-colors">
-                  Fasilitas & Gemini Pro
+                  Fasilitas
                 </Link>
               </li>
               <li>
@@ -59,12 +59,12 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/#faq" className="hover:text-white transition-colors">
-                  Pertanyaan Umum (FAQ)
+                  FAQ
                 </Link>
               </li>
               <li>
                 <Link href="/daftar" className="text-white hover:underline font-semibold transition-colors">
-                  Halaman Pendaftaran →
+                  Pendaftaran →
                 </Link>
               </li>
             </ul>

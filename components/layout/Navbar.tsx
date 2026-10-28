@@ -35,13 +35,13 @@ export function Navbar() {
               Kenapa Privat?
             </Link>
             <Link href="/#program" className="hover:text-white transition-colors">
-              Pilihan Kelas
+              Program
             </Link>
             <Link href="/#fasilitas" className="hover:text-white transition-colors">
-              Fasilitas & Gemini Pro
+              Fasilitas
             </Link>
             <Link href="/#alur" className="hover:text-white transition-colors">
-              Alur Pendaftaran
+              Alur
             </Link>
             <Link href="/#faq" className="hover:text-white transition-colors">
               FAQ
@@ -106,21 +106,21 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="px-2 py-1.5 rounded-md hover:bg-white/5 hover:text-white transition-colors"
             >
-              Pilihan Kelas
+              Program
             </Link>
             <Link
               href="/#fasilitas"
               onClick={() => setMobileMenuOpen(false)}
               className="px-2 py-1.5 rounded-md hover:bg-white/5 hover:text-white transition-colors"
             >
-              Fasilitas & Gemini Pro
+              Fasilitas
             </Link>
             <Link
               href="/#alur"
               onClick={() => setMobileMenuOpen(false)}
               className="px-2 py-1.5 rounded-md hover:bg-white/5 hover:text-white transition-colors"
             >
-              Alur Pendaftaran
+              Alur
             </Link>
             <Link
               href="/#faq"
