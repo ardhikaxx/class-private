@@ -110,7 +110,17 @@ export function QRISPaymentPanel({
             )}
           </div>
 
-          <div className="mt-3.5 space-y-1 text-center">
+          {/* Total Pembayaran tepat di bawah QR code */}
+          <div className="mt-3 pt-2.5 border-t border-zinc-200/80 text-center">
+            <span className="text-[10px] font-mono tracking-wider uppercase text-zinc-500 font-bold block">
+              Total Pembayaran
+            </span>
+            <div className="text-2xl font-black text-zinc-950 tracking-tight font-mono mt-0.5">
+              {formatRupiah(transaction.amount)}
+            </div>
+          </div>
+
+          <div className="mt-3 space-y-1 text-center">
             <div className="text-xs font-bold text-zinc-950">
               {QRIS_MERCHANT_INFO.name}
             </div>
