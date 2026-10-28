@@ -116,7 +116,7 @@ export function FloatingNavBottom() {
       aria-label="Navigasi Bawah Ponsel"
       className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 pointer-events-auto"
     >
-      <div className="flex items-center gap-1 p-1.5 rounded-full bg-slate-900/95 text-white backdrop-blur-xl border border-slate-700/80 shadow-2xl shadow-black/50 ring-1 ring-white/10 transition-all duration-300">
+      <div className="flex items-center gap-1 p-1.5 rounded-full bg-zinc-950/85 text-white backdrop-blur-2xl border border-white/15 shadow-2xl shadow-black/90 ring-1 ring-white/10 transition-all duration-300">
         {navItems.map((item) => {
           const isActive = activeId === item.id;
           const Icon = item.icon;
@@ -128,8 +128,8 @@ export function FloatingNavBottom() {
               onClick={() => handleItemClick(item)}
               className={`relative flex items-center justify-center transition-all duration-300 select-none ${
                 isActive
-                  ? 'bg-indigo-600 text-white px-3.5 py-2 rounded-full font-bold shadow-md shadow-indigo-600/30'
-                  : 'p-2 text-slate-400 hover:text-slate-200 active:scale-95 rounded-full hover:bg-slate-800/60'
+                  ? 'bg-white text-zinc-950 px-3.5 py-2 rounded-full font-bold shadow-lg shadow-white/20'
+                  : 'p-2 text-zinc-400 hover:text-white active:scale-95 rounded-full hover:bg-white/10'
               }`}
               aria-current={isActive ? 'page' : undefined}
               aria-label={item.label}

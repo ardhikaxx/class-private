@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { APP_CONFIG } from '@/lib/config';
@@ -13,6 +13,12 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 });
+
+export const viewport: Viewport = {
+  themeColor: '#09090b',
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: {
@@ -58,8 +64,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased h-full`}>
-      <body className="min-h-full flex flex-col font-sans bg-white text-slate-900 pb-20 md:pb-0">
+    <html
+      lang="id"
+      data-scroll-behavior="smooth"
+      className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
+    >
+      <body className="min-h-full flex flex-col font-sans bg-zinc-950 text-zinc-100 selection:bg-white selection:text-black pb-20 md:pb-0">
         {children}
         <FloatingNavBottom />
       </body>
