@@ -74,7 +74,7 @@ export function ProgramSelectionStep({
           Pilih Program Kelas
         </h2>
         <p className="text-xs sm:text-sm text-zinc-400">
-          Pilih fokus bimbingan privat 1-on-1 sesuai kebutuhan aplikasimu.
+          Materi disesuaikan dengan kemampuan awalmu (dari nol untuk pemula Non-IT, atau studi kasus/skripsi untuk mahasiswa IT).
         </p>
       </div>
 

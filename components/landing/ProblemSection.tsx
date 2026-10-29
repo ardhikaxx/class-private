@@ -26,13 +26,13 @@ export function ProblemSection() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-1.5 mb-10">
           <span className="text-xs font-mono text-zinc-400 uppercase tracking-widest block">
-            KENAPA PRIVAT?
+            KENAPA HARUS PRIVAT?
           </span>
           <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-            Belajar Lebih Efektif dengan Mentoring 1-on-1
+            Belajar Lebih Terarah dengan Mentoring 1-on-1
           </h2>
           <p className="text-xs sm:text-sm text-zinc-400">
-            Fokus penuh pada ide aplikasimu tanpa terdistraksi materi massal.
+            Tanpa rasa takut minder atau tertinggal. Pemula Non-IT dibimbing dari dasar, dan mahasiswa/praktisi IT fokus ke akselerasi proyek & skripsi.
           </p>
         </div>
 

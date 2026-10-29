@@ -39,18 +39,18 @@ export function Navbar({ hideOnMobile = true, className = '' }: NavbarProps) {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-zinc-300">
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-300">
             <Link href="/#solusi" className="hover:text-white transition-colors">
               Kenapa Privat?
             </Link>
             <Link href="/#program" className="hover:text-white transition-colors">
               Program
             </Link>
-            <Link href="/#fasilitas" className="hover:text-white transition-colors">
-              Fasilitas
+            <Link href="/#teknologi" className="hover:text-white transition-colors">
+              Teknologi
             </Link>
-            <Link href="/#alur" className="hover:text-white transition-colors">
-              Alur
+            <Link href="/#perbandingan" className="hover:text-white transition-colors">
+              Keunggulan
             </Link>
             <Link href="/#faq" className="hover:text-white transition-colors">
               FAQ
@@ -120,18 +120,18 @@ export function Navbar({ hideOnMobile = true, className = '' }: NavbarProps) {
               Program
             </Link>
             <Link
-              href="/#fasilitas"
+              href="/#teknologi"
               onClick={() => setMobileMenuOpen(false)}
               className="px-2 py-1.5 rounded-md hover:bg-white/5 hover:text-white transition-colors"
             >
-              Fasilitas
+              Teknologi
             </Link>
             <Link
-              href="/#alur"
+              href="/#perbandingan"
               onClick={() => setMobileMenuOpen(false)}
               className="px-2 py-1.5 rounded-md hover:bg-white/5 hover:text-white transition-colors"
             >
-              Alur
+              Keunggulan
             </Link>
             <Link
               href="/#faq"

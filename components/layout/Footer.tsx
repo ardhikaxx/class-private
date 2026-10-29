@@ -48,6 +48,16 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/#teknologi" className="hover:text-white transition-colors">
+                  Teknologi
+                </Link>
+              </li>
+              <li>
+                <Link href="/#perbandingan" className="hover:text-white transition-colors">
+                  Keunggulan
+                </Link>
+              </li>
+              <li>
                 <Link href="/#fasilitas" className="hover:text-white transition-colors">
                   Fasilitas
                 </Link>

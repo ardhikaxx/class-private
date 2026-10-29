@@ -29,24 +29,35 @@ export const metadata: Metadata = {
   },
   description: APP_CONFIG.metadata.description,
   keywords: [
-    'private coding class',
     'kursus coding privat',
-    'belajar bikin website',
-    'belajar bikin aplikasi mobile',
-    'kursus programming privat',
+    'kursus coding non it',
+    'belajar ngoding orang awam',
+    'les privat coding pemula',
+    'bimbingan skripsi informatika',
+    'kursus coding mahasiswa it',
     'bimbingan 1 on 1 coding',
+    'kursus bikin website privat',
+    'kursus aplikasi android privat',
+    'kursus flutter indonesia',
+    'belajar react nextjs',
+    'jasa bimbingan coding skripsi',
     'tutor coding indonesia',
-    'mentoring pemrograman',
-    'integrasi website mobile',
-    'belajar react nextjs flutter',
+    'mentor coding online pemula',
+    'kursus fullstack web developer',
+    'les privat flutter',
     'gemini pro gratis',
-    'belajar coding pemula'
+    'belajar coding dari nol',
+    'private coding class'
   ],
   authors: [{ name: APP_CONFIG.name, url: APP_CONFIG.metadata.siteUrl }],
   creator: APP_CONFIG.name,
   publisher: APP_CONFIG.name,
+  category: 'education',
   alternates: {
     canonical: '/'
+  },
+  verification: {
+    google: APP_CONFIG.metadata.googleSiteVerification || undefined
   },
   openGraph: {
     type: 'website',
@@ -54,17 +65,27 @@ export const metadata: Metadata = {
     url: APP_CONFIG.metadata.siteUrl,
     title: APP_CONFIG.metadata.title,
     description: APP_CONFIG.metadata.description,
-    siteName: APP_CONFIG.name
+    siteName: APP_CONFIG.name,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: APP_CONFIG.metadata.title
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: APP_CONFIG.metadata.title,
     description: APP_CONFIG.metadata.description,
-    creator: '@ardhikaxx'
+    creator: '@ardhikaxx',
+    images: ['/opengraph-image']
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,

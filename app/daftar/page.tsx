@@ -35,12 +35,16 @@ export default function DaftarPage() {
           </div>
 
           {/* Heading - Minimalist */}
-          <div className="text-center max-w-2xl mx-auto mb-8 space-y-1">
+          <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-mono text-zinc-300">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Terbuka untuk Peserta IT Maupun Non-IT (Dari Nol)</span>
+            </div>
             <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Pendaftaran Kelas Privat
+              Pendaftaran Kelas Privat Ngoding
             </h1>
             <p className="text-xs sm:text-sm text-zinc-400">
-              Pilih program, dapatkan kode QRIS, dan konfirmasi via WhatsApp.
+              Pilih program kelas sesuai kebutuhan, dapatkan kode QRIS otomatis, dan mulai bimbingan 1-on-1 bersama pengajar.
             </p>
           </div>
 

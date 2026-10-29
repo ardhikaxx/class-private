@@ -4,6 +4,9 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/landing/HeroSection';
 import { ProblemSection } from '@/components/landing/ProblemSection';
 import { ProgramSection } from '@/components/landing/ProgramSection';
+import { TechStackSection } from '@/components/landing/TechStackSection';
+import { TargetAudienceSection } from '@/components/landing/TargetAudienceSection';
+import { ComparisonSection } from '@/components/landing/ComparisonSection';
 import { BenefitsSection } from '@/components/landing/BenefitsSection';
 import { LearningFlowSection } from '@/components/landing/LearningFlowSection';
 import { FAQSection } from '@/components/landing/FAQSection';
@@ -17,6 +20,9 @@ export default function HomePage() {
         <HeroSection />
         <ProblemSection />
         <ProgramSection />
+        <TechStackSection />
+        <TargetAudienceSection />
+        <ComparisonSection />
         <BenefitsSection />
         <LearningFlowSection />
         <FAQSection />

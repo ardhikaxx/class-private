@@ -29,13 +29,19 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column */}
           <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start gap-2">
-              <span className="text-xs font-mono font-bold text-white tracking-wider uppercase">
-                {APP_CONFIG.name}
-              </span>
-              <span className="text-zinc-600">•</span>
-              <span className="text-xs font-mono text-zinc-400 tracking-wide">
-                1-on-1 Mentoring
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono font-bold text-white tracking-wider uppercase">
+                  {APP_CONFIG.name}
+                </span>
+                <span className="text-zinc-600">•</span>
+                <span className="text-xs font-mono text-zinc-400 tracking-wide">
+                  1-on-1 Mentoring
+                </span>
+              </div>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-[11px] font-mono text-zinc-300">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span>IT & Non-IT Welcome</span>
               </span>
             </div>
 
@@ -47,7 +53,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Bimbingan privat intensif praktik langsung bersama pengajar. Fokus pada realisasi ide aplikasimu dengan jadwal fleksibel dan fasilitas Gemini Pro 3 bulan.
+              Bimbingan privat ngoding 1-on-1 intensif untuk siapa saja yang membutuhkan. Mulai dari pemula awam tanpa latar belakang IT (dibimbing dari nol sampai paham), hingga mahasiswa & praktisi IT yang butuh bimbingan skripsi atau proyek nyata.
             </p>
 
             {/* CTAs */}

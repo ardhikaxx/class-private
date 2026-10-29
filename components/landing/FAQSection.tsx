@@ -2,43 +2,10 @@
 
 import React, { useState } from 'react';
 import { ChevronDownIcon } from '@/components/ui/Icons';
-import { APP_CONFIG } from '@/lib/config';
-
-interface FAQItem {
-  question: string;
-  answer: string;
-}
+import { FAQS } from '@/lib/faqs';
 
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const faqs: FAQItem[] = [
-    {
-      question: 'Apakah pemula tanpa dasar coding bisa ikut?',
-      answer:
-        'Bisa. Kelas bersifat privat 1-on-1, sehingga materi dimulai dari dasar dan tempo disesuaikan dengan kemampuanmu.'
-    },
-    {
-      question: 'Bolehkah membawa ide proyek sendiri?',
-      answer:
-        'Sangat boleh. Kelas ini difokuskan langsung untuk mewujudkan ide proyek pribadimu.'
-    },
-    {
-      question: 'Bagaimana penentuan jadwal pertemuan?',
-      answer:
-        'Jadwal 5 sesi pertemuan disepakati bersama antara kamu dan pengajar setelah pendaftaran selesai.'
-    },
-    {
-      question: 'Bagaimana cara pembayaran?',
-      answer:
-        'Pindai QRIS di halaman pendaftaran dengan aplikasi m-Banking atau e-Wallet, lalu kirim bukti transfer ke WhatsApp pengajar.'
-    },
-    {
-      question: 'Kapan akses Gemini Pro 3 bulan diberikan?',
-      answer:
-        `Fasilitas Gemini Pro selama ${APP_CONFIG.geminiProDurationMonths} bulan akan diberikan oleh pengajar setelah pembayaran diverifikasi.`
-    }
-  ];
 
   const toggleFAQ = (idx: number) => {
     setOpenIndex(openIndex === idx ? null : idx);
@@ -49,18 +16,18 @@ export function FAQSection() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-1.5 mb-8">
           <span className="text-xs font-mono text-zinc-400 uppercase tracking-widest block">
-            FAQ
+            FAQ & TANYA JAWAB
           </span>
           <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-            Pertanyaan Umum
+            Pertanyaan yang Sering Diajukan
           </h2>
           <p className="text-xs sm:text-sm text-zinc-400">
-            Hal yang sering ditanyakan seputar kelas privat.
+            Segala hal yang perlu kamu ketahui tentang program bimbingan privat coding.
           </p>
         </div>
 
         <div className="space-y-2.5">
-          {faqs.map((faq, idx) => {
+          {FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
               <div

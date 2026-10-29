@@ -40,6 +40,10 @@ export function NameStep({ initialName, onNext }: NameStepProps) {
   return (
     <div className="max-w-xl mx-auto bg-zinc-900/60 border border-white/15 backdrop-blur-2xl rounded-3xl p-6 sm:p-8 shadow-2xl text-white space-y-6">
       <div className="text-center space-y-1.5 mb-2">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-[11px] font-mono text-zinc-300">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Terbuka untuk Peserta IT & Non-IT</span>
+        </div>
         <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
           Nama Lengkap Peserta
         </h2>
