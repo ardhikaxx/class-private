@@ -31,13 +31,13 @@ export function ComparisonSection() {
       feature: 'Dukungan AI Terpadu',
       selfLearning: 'AI gratis terbatas',
       bootcamp: 'Jarang diajarkan prompting AI',
-      privateClass: 'Bonus Gemini Pro 3 Bulan Penuh'
+      privateClass: 'Bonus Gemini Pro 1 Bulan Penuh'
     },
     {
       feature: 'Biaya Investasi',
       selfLearning: 'Gratis tapi boros waktu & buntu',
       bootcamp: 'Mahal (Rp 5.000.000 - 20.000.000+)',
-      privateClass: 'Super Terjangkau (Rp 250rb - 450rb)'
+      privateClass: 'Super Terjangkau (Rp 195rb - 349rb)'
     }
   ];
 

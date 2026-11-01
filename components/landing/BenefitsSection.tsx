@@ -26,7 +26,7 @@ export function BenefitsSection() {
     },
     {
       icon: SparklesIcon,
-      title: 'Gemini Pro 3 Bulan',
+      title: 'Gemini Pro 1 Bulan',
       desc: `Akses AI selama ${APP_CONFIG.geminiProDurationMonths} bulan untuk mempercepat riset dan solusi kode.`
     }
   ];

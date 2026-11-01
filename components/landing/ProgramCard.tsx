@@ -80,7 +80,7 @@ export function ProgramCard({ program }: ProgramCardProps) {
 
         <div className="pt-2 border-t border-white/10 text-[11px] text-zinc-400 space-y-1 font-mono">
           <div>• Jadwal fleksibel disepakati bersama</div>
-          <div>• Bonus Gemini Pro 3 Bulan</div>
+          <div>• Bonus Gemini Pro 1 Bulan</div>
         </div>
       </div>
 

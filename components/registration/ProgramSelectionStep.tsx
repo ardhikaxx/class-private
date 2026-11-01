@@ -164,7 +164,7 @@ export function ProgramSelectionStep({
                   </div>
                   <div className="flex items-center gap-2 text-white font-medium">
                     <SparklesIcon className="w-3.5 h-3.5 text-white flex-shrink-0" />
-                    <span>Gemini Pro 3 Bulan</span>
+                    <span>Gemini Pro 1 Bulan</span>
                   </div>
                 </div>
               </div>

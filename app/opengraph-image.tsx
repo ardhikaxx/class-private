@@ -62,7 +62,7 @@ export default async function Image() {
             Belajar Bikin Website & Aplikasi Sesuai Ide Proyekmu
           </h1>
           <p style={{ fontSize: '22px', color: '#a1a1aa', marginTop: '20px', lineHeight: 1.4 }}>
-            Bimbingan privat intensif 5 pertemuan praktik langsung • Jadwal fleksibel • Bonus Gemini Pro 3 bulan
+            Bimbingan privat intensif 5 pertemuan praktik langsung • Jadwal fleksibel • Bonus Gemini Pro 1 bulan
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export default async function Image() {
               fontWeight: 700
             }}
           >
-            Mulai dari Rp 250.000 / paket
+            Mulai dari Rp 195.000 / paket
           </div>
           <div style={{ fontSize: '18px', color: '#71717a', fontFamily: 'monospace' }}>
             https://class-private.vercel.app

@@ -28,7 +28,7 @@ export const PROGRAMS: Record<ProgramSlug, Program> = {
     slug: 'website',
     name: 'Class Website',
     tagline: 'Wujudkan ide website impian dari antarmuka hingga database',
-    price: 250000,
+    price: 195000,
     popularBadge: 'Paling Diminati',
     isFeatured: false,
     description:
@@ -44,7 +44,7 @@ export const PROGRAMS: Record<ProgramSlug, Program> = {
     meetingsCount: 5,
     durationLabel: '5 sesi pertemuan privat (1-on-1)',
     scheduleLabel: 'Jadwal fleksibel disepakati bersama',
-    bonusFacility: 'Akses Gemini Pro selama 3 bulan',
+    bonusFacility: 'Akses Gemini Pro selama 1 bulan',
     accentColor: {
       bg: 'bg-blue-50/70',
       border: 'border-blue-200',
@@ -57,7 +57,7 @@ export const PROGRAMS: Record<ProgramSlug, Program> = {
     slug: 'mobile',
     name: 'Class Aplikasi Mobile',
     tagline: 'Bangun aplikasi Android/iOS siap pakai sesuai ide kebutuhanmu',
-    price: 300000,
+    price: 249000,
     popularBadge: 'Pilihan Populer',
     isFeatured: false,
     description:
@@ -73,7 +73,7 @@ export const PROGRAMS: Record<ProgramSlug, Program> = {
     meetingsCount: 5,
     durationLabel: '5 sesi pertemuan privat (1-on-1)',
     scheduleLabel: 'Jadwal fleksibel disepakati bersama',
-    bonusFacility: 'Akses Gemini Pro selama 3 bulan',
+    bonusFacility: 'Akses Gemini Pro selama 1 bulan',
     accentColor: {
       bg: 'bg-violet-50/70',
       border: 'border-violet-200',
@@ -86,7 +86,7 @@ export const PROGRAMS: Record<ProgramSlug, Program> = {
     slug: 'integrasi',
     name: 'Class Integrasi Website dan Aplikasi Mobile',
     tagline: 'Solusi terlengkap: website & mobile terhubung dengan data terpusat',
-    price: 450000,
+    price: 349000,
     popularBadge: 'Paling Komprehensif',
     isFeatured: true,
     description:
@@ -102,7 +102,7 @@ export const PROGRAMS: Record<ProgramSlug, Program> = {
     meetingsCount: 5,
     durationLabel: '5 sesi pertemuan privat (1-on-1)',
     scheduleLabel: 'Jadwal fleksibel disepakati bersama',
-    bonusFacility: 'Akses Gemini Pro selama 3 bulan',
+    bonusFacility: 'Akses Gemini Pro selama 1 bulan',
     accentColor: {
       bg: 'bg-indigo-50/80',
       border: 'border-indigo-300 ring-2 ring-indigo-500/20',

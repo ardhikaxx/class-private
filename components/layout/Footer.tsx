@@ -108,7 +108,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4 font-mono">
           <p>© {currentYear} {APP_CONFIG.name}. Hak Cipta Dilindungi.</p>
           <p className="text-center sm:text-right text-[11px]">
-            Fasilitas Gemini Pro 3 Bulan disesuaikan dengan ketentuan resmi penyedia.
+            Fasilitas Gemini Pro 1 Bulan disesuaikan dengan ketentuan resmi penyedia.
           </p>
         </div>
       </div>

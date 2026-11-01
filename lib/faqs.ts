@@ -42,7 +42,7 @@ export const FAQS: FAQItem[] = [
       'Pembayaran dilakukan dengan memindai kode QRIS di halaman pendaftaran menggunakan aplikasi m-Banking (BCA, Mandiri, BRI, BNI, dll.) atau e-Wallet (GoPay, OVO, Dana, ShopeePay), lalu kirimkan screenshot bukti transfer ke WhatsApp pengajar.'
   },
   {
-    question: 'Kapan fasilitas Gemini Pro 3 bulan diberikan?',
+    question: 'Kapan fasilitas Gemini Pro 1 bulan diberikan?',
     answer:
       `Fasilitas akses akun Gemini Pro selama ${APP_CONFIG.geminiProDurationMonths} bulan akan langsung diberikan oleh pengajar setelah pembayaran kelasmu berhasil diverifikasi.`
   },

@@ -2,7 +2,7 @@ export const APP_CONFIG = {
   name: 'Private Coding Class',
   tagline: 'Kursus Coding Privat 1-on-1: Terbuka untuk Background IT & Non-IT',
   description:
-    'Program bimbingan privat coding 1-on-1 untuk siapa saja yang membutuhkan. Terbuka bagi orang awam (Non-IT) dari nol tanpa pengalaman, maupun mahasiswa & praktisi IT yang butuh bimbingan proyek nyata atau skripsi. 5 sesi intensif dengan jadwal fleksibel dan bonus Gemini Pro 3 bulan.',
+    'Program bimbingan privat coding 1-on-1 untuk siapa saja yang membutuhkan. Terbuka bagi orang awam (Non-IT) dari nol tanpa pengalaman, maupun mahasiswa & praktisi IT yang butuh bimbingan proyek nyata atau skripsi. 5 sesi intensif dengan jadwal fleksibel dan bonus Gemini Pro 1 bulan.',
   
   // WhatsApp Contact Details
   whatsapp: {
@@ -13,7 +13,7 @@ export const APP_CONFIG = {
 
   // Learning parameters
   meetingsCount: 5,
-  geminiProDurationMonths: 3,
+  geminiProDurationMonths: 1,
 
   // Payment configuration
   qris: {
@@ -32,7 +32,7 @@ export const APP_CONFIG = {
     siteUrl: 'https://class-private.vercel.app',
     title: 'Kursus Coding Privat 1-on-1 (IT & Non-IT) | Bimbingan Bikin Website & Aplikasi — Private Coding Class',
     description:
-      'Pendaftaran kelas privat ngoding 1-on-1 untuk siapa saja yang membutuhkan. Terbuka untuk orang awam (Non-IT) mulai dari nol maupun mahasiswa/praktisi IT (bimbingan skripsi & proyek). 5 sesi fleksibel + bonus Gemini Pro 3 bulan.',
+      'Pendaftaran kelas privat ngoding 1-on-1 untuk siapa saja yang membutuhkan. Terbuka untuk orang awam (Non-IT) mulai dari nol maupun mahasiswa/praktisi IT (bimbingan skripsi & proyek). 5 sesi fleksibel + bonus Gemini Pro 1 bulan.',
     googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || ''
   }
 } as const;

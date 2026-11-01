@@ -111,7 +111,7 @@ export function OrderSummary({
             <span className="text-xs">Fasilitas</span>
           </div>
           <span className="font-semibold text-xs sm:text-sm text-white">
-            Gemini Pro 3 Bulan
+            Gemini Pro 1 Bulan
           </span>
         </div>
 

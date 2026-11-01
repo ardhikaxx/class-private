@@ -55,7 +55,7 @@ export function TechStackSection() {
       name: 'Gemini Pro AI',
       category: 'AI-Assisted Coding',
       description: 'Akselerasi riset algoritma, auto-debugging, dan eksplorasi solusi kode pintar dengan AI terdepan.',
-      highlight: 'Bonus 3 Bulan'
+      highlight: 'Bonus 1 Bulan'
     }
   ];
 

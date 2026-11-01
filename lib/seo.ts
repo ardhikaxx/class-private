@@ -31,7 +31,7 @@ export function getStructuredData() {
         image: `${baseUrl}/opengraph-image`,
         description: APP_CONFIG.description,
         telephone: `+${APP_CONFIG.whatsapp.intlNumber}`,
-        priceRange: 'Rp 250.000 - Rp 450.000',
+        priceRange: 'Rp 195.000 - Rp 349.000',
         currenciesAccepted: 'IDR',
         paymentAccepted: 'QRIS, Bank Transfer, GoPay, OVO, Dana, ShopeePay',
         address: {

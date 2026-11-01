@@ -14,7 +14,7 @@ export function ProgramSection() {
             Pilihan Program Mentoring
           </h2>
           <p className="text-xs sm:text-sm text-zinc-400">
-            Setiap paket mencakup 5 sesi privat 1-on-1 dan akses Gemini Pro 3 bulan.
+            Setiap paket mencakup 5 sesi privat 1-on-1 dan akses Gemini Pro 1 bulan.
           </p>
         </div>
 
